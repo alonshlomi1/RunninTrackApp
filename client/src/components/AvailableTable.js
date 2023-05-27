@@ -102,7 +102,7 @@ const handleEdit = async (e, available) => {
         <input onChange={(e) => setEndDate(e.target.value)} className="input"
             value={endDate} type="date" />
     </div>
-        {tableData.length == 0? <br/> :  <table>
+        {tableData.length === 0? <br/> :  <table>
             <thead>
                 <tr>
                 <th>Date</th>
@@ -114,7 +114,7 @@ const handleEdit = async (e, available) => {
             </thead>
             <tbody>
                 {tableData.map((availavle) => {
-                    if(edit == availavle._id){ return(
+                    if(edit === availavle._id){ return(
                       <tr key={availavle._id}>
                       <td><input onChange={(e) => setEditDate(e.target.value)} className="input"
                           value={editDate} type="date" /></td>

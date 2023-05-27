@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 export default function RegisterForm(props ){
     const [name, setName] = useState('');
@@ -91,12 +91,12 @@ export default function RegisterForm(props ){
             throw new Error(userResponse.status);
       
           const userData = await userResponse.json();
-          if(props.state.user == null){
+          if(props.state.user === null){
             props.setState(prev => {
               return {
                 ...prev,
                 user: userData,
-                menu: userData.type=="admin"?["Home","My Lessons","Submit Lessons","Add Available Time","Instructors"]:userData.type=="instructor"?["Home","My Lessons","Add Available Time","Edit Available Time"]:["Home","My Lessons","Lesson Register"],
+                menu: userData.type==="admin"?["Home","My Lessons","Submit Lessons","Add Available Time","Instructors"]:userData.type=="instructor"?["Home","My Lessons","Add Available Time","Edit Available Time"]:["Home","My Lessons","Lesson Register"],
                 page: "Home"
               }
             });

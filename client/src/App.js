@@ -27,6 +27,8 @@ function App() {
         return <Instructor state={state} setState={setState}/>
       case 'student':  
         return <Student state={state} setState={setState}/>
+      default:  
+        return <Login state={state} setState={setState}/>
     }
   }
   // Rendering the App component

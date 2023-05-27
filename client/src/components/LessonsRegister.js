@@ -81,7 +81,7 @@ export default function LessonsRegister(props){
           if (!response.ok)
             throw new Error(response.status);
       
-          const data = await response.json();
+          await response.json();
           alert("saved")
         }catch (error) {
           alert(error);
@@ -106,7 +106,7 @@ export default function LessonsRegister(props){
         <input onChange={(e) => setEndDate(e.target.value)} className="input"
             value={endDate} type="date" />
     </div>
-        {availabelLessons.length == 0? <br/> :  <table>
+        {availabelLessons.length === 0? <br/> :  <table>
             <thead>
                 <tr>
                 <th>Date</th>

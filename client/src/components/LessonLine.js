@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import group from '../images/group.png'
 import single from '../images/single.png'
 const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];

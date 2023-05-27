@@ -87,7 +87,7 @@ export default function LessonsRegister(props){
           </div >
         </div>
         <div  className='table-div'>
-        {lessons.length == 0? <h3>No Lessons</h3> :  <table >
+        {lessons.length === 0? <h3>No Lessons</h3> :  <table >
             <thead>
                 <tr>
                 <th>Date</th>

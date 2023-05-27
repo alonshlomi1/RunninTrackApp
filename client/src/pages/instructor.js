@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import AvailableTable from '../components/AvailableTable';
 import AvailableForm from '../components/AvailableForm';
 import Lessons from '../components/Lessons'
@@ -16,6 +16,8 @@ export default function Instructor(props){
           return <AvailableForm state={props.state} setState={props.setState}/>
         case 'Edit Available Time':
           return <AvailableTable state={props.state} setState={props.setState}/>
+        default:
+          return <Home state={props.state} setState={props.setState}/>
       }
     }
       return(

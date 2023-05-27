@@ -34,7 +34,7 @@ const [email, setEmail] = useState('');
           return {
             ...prev,
             user: data,
-            menu: data.type=="admin"?["Home","My Lessons","Submit Lessons","Add Available Time","Instructors"]:data.type=="instructor"?["Home","My Lessons","Add Available Time","Edit Available Time"]:["Home","My Lessons","Lesson Register"],
+            menu: data.type==="admin"?["Home","My Lessons","Submit Lessons","Add Available Time","Instructors"]:data.type=="instructor"?["Home","My Lessons","Add Available Time","Edit Available Time"]:["Home","My Lessons","Lesson Register"],
             page: "Home"
           };
         });

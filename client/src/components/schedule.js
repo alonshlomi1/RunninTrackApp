@@ -111,7 +111,7 @@ export default function Schedule(){
             value={endDate} type="date" />
     </div>
     <div className="table_div">
-    {tableData.length == 0? <h3>No Available Time</h3> :  <table>
+    {tableData.length === 0? <h3>No Available Time</h3> :  <table>
             <thead>
                 <tr>
                 <th>Date</th>
@@ -153,7 +153,7 @@ export default function Schedule(){
             </tbody>
             </table> }
     </div>
-    {tableData.length == 0?"":
+    {tableData.length === 0?"":
     <button className='save-button' onClick={handle_save}>Save</button>}
   </div>;
 }

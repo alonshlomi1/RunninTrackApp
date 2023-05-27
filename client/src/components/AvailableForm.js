@@ -40,7 +40,7 @@ export default function AvailableForm(props){
             if (!response.ok)
               throw new Error(response.status);
         
-            const data = await response.json();
+            await response.json();
 
             alert('Saved')
           }catch (error) {
