@@ -52,7 +52,6 @@ export default function LessonsRegister(props){
           method: 'GET',
           headers: {  'accept': "application/json"}
       };
-      console.log(props.state.user.object)
       try {
           const response = await fetch('http://localhost:5000/lessons/available/'+new Date(startDate)+'/'+new Date(endDate)+'/'+props.state.user.object, requestAvailableOptions);
       
@@ -87,13 +86,14 @@ export default function LessonsRegister(props){
         }catch (error) {
           alert(error);
         }
+        handle_table(e)
     }
     useEffect((e) => {
       if (new Date(endDate) > new Date(startDate))
         handle_table(e)
       else
         alert("Invalid Dates")
-    }, [endDate, startDate, handleRegister])
+    }, [endDate, startDate])
     return(
         <div className='page'>
            <div>
