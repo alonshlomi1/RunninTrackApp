@@ -6,8 +6,6 @@ services:
       - '27017:27017'
     volumes: 
       - data:/data/db
-    newtworks:
-      - mynet 
     # environment: 
     #   MONGO_INITDB_ROOT_USERNAME: max
     #   MONGO_INITDB_ROOT_PASSWORD: secret
@@ -25,8 +23,6 @@ services:
       - logs:/app/logs
       - ./server:/app
       - /app/node_modules
-    newtworks:
-      - mynet
     env_file: 
       - ./server/.env
     depends_on:
@@ -38,8 +34,6 @@ services:
       - '3000:3000'
     volumes: 
       - ./client/src:/app/src
-    newtworks:
-      - mynet
     stdin_open: true
     tty: true
     depends_on: 
