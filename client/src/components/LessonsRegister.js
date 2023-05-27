@@ -136,7 +136,7 @@ export default function LessonsRegister(props){
                     <div className="group-logo">
                     <img src={group} alt="Logo" />
                     </div>}</td>
-                    <td>{(instructors.filter(instructor => instructor.id === lesson.instructor)[0].name) }</td>
+                    <td>{instructors.length>0?(instructors.filter(instructor => instructor.id === lesson.instructor)[0].name):"" }</td>
                     <td>
                       <button className='btn' onClick={(e) => handleRegister(e,lesson)}>
                         Register
