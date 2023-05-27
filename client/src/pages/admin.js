@@ -21,7 +21,7 @@ export default function Admin(props){
       case 'Instructors':
         return <Register state={props.state} setState={props.setState}/>
       default:
-        return <Setting/>;
+        return <Home state={props.state} setState={props.setState}/>
     }
   }
     return(
