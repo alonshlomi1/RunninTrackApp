@@ -1,0 +1,7 @@
+POST http://localhost:5000/schedule
+Content-Type: application/json
+
+{
+    "start_week": "2023-05-21T01:00:00.000Z",
+    "end_week": "2023-05-28T05:00:00.000Z"
+}

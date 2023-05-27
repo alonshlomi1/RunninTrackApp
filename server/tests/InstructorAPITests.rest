@@ -1,0 +1,72 @@
+GET http://localhost:5000/instructors
+
+
+###
+
+POST http://localhost:3000/instructors
+Content-Type: application/json
+
+{
+    "name": "Yosi Cohen",
+    "gender": "Male",
+    "birthdate": "1995-07-16T02:13:33.959Z",
+    "seniority": 5
+}
+
+###
+
+GET http://localhost:3000/instructors/6469f6578aa1844a600c7c60
+
+
+###
+DELETE http://localhost:3000/instructors/646a0b4acdbd779516d39643
+
+
+
+###
+PATCH http://localhost:3000/instructors/6469f61fbe35dd2dd7577672
+Content-Type: application/json
+
+{
+    "name": "Alon Shlomi"
+
+}
+
+
+
+
+###
+
+POST http://localhost:3000/instructors
+Content-Type: application/json
+
+{
+    "name": "Yosi Cohen",
+    "gender": "Male",
+    "birthdate": "1995-07-16T02:13:33.959Z",
+    "seniority": 5
+}
+
+###
+
+POST http://localhost:3000/instructors
+Content-Type: application/json
+
+{
+    "name": "Elad Levi",
+    "gender": "Male",
+    "birthdate": "1998-10-06T02:13:33.959Z",
+    "seniority": 2
+}
+
+###
+
+POST http://localhost:3000/instructors
+Content-Type: application/json
+
+{
+    "name": "Sharon Yam",
+    "gender": "Female",
+    "birthdate": "1999-08-19T02:13:33.959Z",
+    "seniority": 1
+}

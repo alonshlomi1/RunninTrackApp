@@ -1,0 +1,98 @@
+GET http://localhost:3000/available
+
+
+
+###
+
+POST http://localhost:5000/available
+Content-Type: application/json
+
+{
+    "start_time": "2023-05-25T01:00:00.000Z",
+    "end_time": "2023-05-25T05:00:00.000Z",
+    "instructor": "646a17ab19e93e4040184e56"
+}
+###
+
+POST http://localhost:3000/available/group
+Content-Type: application/json
+
+{
+    "group":[
+        {
+            "start_time": "2023-05-22T01:00:00.000Z",
+            "end_time": "2023-05-22T05:00:00.000Z",
+            "instructor": "646a17ab19e93e4040184e56"
+        },
+        {
+            "start_time": "2023-05-22T01:00:00.000Z",
+            "end_time": "2023-05-22T05:00:00.000Z",
+            "instructor": "646a17b119e93e4040184e58"
+        },
+        {
+            "start_time": "2023-05-22T00:30:00.000Z",
+            "end_time": "2023-05-22T02:00:00.000Z",
+            "instructor": "646a17b119e93e4040184e58"
+        },
+        {
+            "start_time": "2023-05-22T04:00:00.000Z",
+            "end_time": "2023-05-22T07:00:00.000Z",
+            "instructor": "646a17b119e93e4040184e58"
+        }
+    ]    
+}
+
+###
+
+GET http://localhost:3000/available/646a22d55a01352f3643d23b
+
+
+###
+DELETE http://localhost:3000/available/646a260ca4dfe35d8a4ee91e
+
+
+
+###
+PATCH http://localhost:3000/available/646a22d55a01352f3643d23b
+Content-Type: application/json
+
+{
+    "start_time": "2023-05-28T05:13:33.959Z"
+
+}
+
+
+
+
+###
+
+POST http://localhost:3000/available
+Content-Type: application/json
+
+{
+    "start_time": "2023-05-22T01:00:00.000Z",
+    "end_time": "2023-05-22T05:00:00.000Z",
+    "instructor": "646a17ab19e93e4040184e56"
+}
+
+###
+
+POST http://localhost:3000/available
+Content-Type: application/json
+
+{
+    "start_time": "2023-05-23T07:00:00.000Z",
+    "end_time": "2023-05-23T12:00:00.000Z",
+    "instructor": "646a17ab19e93e4040184e56"
+}
+
+###
+
+POST http://localhost:3000/available
+Content-Type: application/json
+
+{
+    "start_time": "2023-05-20T01:00:00.000Z",
+    "end_time": "2023-05-20T05:00:00.000Z",
+    "instructor": "646a17ab19e93e4040184e56"
+}
