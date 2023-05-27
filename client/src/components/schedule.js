@@ -35,7 +35,7 @@ export default function Schedule(){
     };
   
     try {
-      let response = await fetch('http://localhost:5000/instructors', requestUserOptions);
+      let response = await fetch('http://18.134.144.102:5000/instructors', requestUserOptions);
   
       if (!response.ok)
         throw new Error(response.status);
@@ -62,7 +62,7 @@ export default function Schedule(){
     };
   
     try {
-      let response = await fetch('http://localhost:5000/schedule/'+new Date(startDate)+'/'+new Date(endDate), requestUserOptions);
+      let response = await fetch('http://18.134.144.102:5000/schedule/'+new Date(startDate)+'/'+new Date(endDate), requestUserOptions);
   
       if (!response.ok)
         throw new Error(response.status);
@@ -88,7 +88,7 @@ export default function Schedule(){
       body: JSON.stringify(tableData)
     };
     try {
-      let response = await fetch('http://localhost:5000/lessons/group', requestSaveLessonsOptions);
+      let response = await fetch('http://18.134.144.102:5000/lessons/group', requestSaveLessonsOptions);
       if (!(response.ok ))
         throw new Error(response.status);
   

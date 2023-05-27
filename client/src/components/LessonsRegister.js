@@ -53,7 +53,7 @@ export default function LessonsRegister(props){
           headers: {  'accept': "application/json"}
       };
       try {
-          const response = await fetch('http://localhost:5000/lessons/available/'+new Date(startDate)+'/'+new Date(endDate)+'/'+props.state.user.object, requestAvailableOptions);
+          const response = await fetch('http://18.134.144.102:5000/lessons/available/'+new Date(startDate)+'/'+new Date(endDate)+'/'+props.state.user.object, requestAvailableOptions);
       
           if (!response.ok)
             throw new Error(response.status);
@@ -76,7 +76,7 @@ export default function LessonsRegister(props){
       };
       
       try {
-          const response = await fetch('http://localhost:5000/lessons/'+ lesson._id, requestAvailableOptions);
+          const response = await fetch('http://18.134.144.102:5000/lessons/'+ lesson._id, requestAvailableOptions);
       
           if (!response.ok)
             throw new Error(response.status);

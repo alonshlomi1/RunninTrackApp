@@ -35,7 +35,7 @@ export default function AvailableForm(props){
         };
         
         try {
-            const response = await fetch('http://localhost:5000/available', requestAvailableOptions);
+            const response = await fetch('http://18.134.144.102:5000/available', requestAvailableOptions);
         
             if (!response.ok)
               throw new Error(response.status);

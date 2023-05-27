@@ -49,13 +49,13 @@ export default function RegisterForm(props ){
           })
         };
         try {
-          console.log('http://localhost:5000/'+(props.state.user == null? "students": "instructors"))
+          console.log('http://18.134.144.102:5000/'+(props.state.user == null? "students": "instructors"))
           let response
           if(props.state.user === null){
-            response = await fetch('http://localhost:5000/students', requestStudentOptions);
+            response = await fetch('http://18.134.144.102:5000/students', requestStudentOptions);
           }
           else{
-            response = await fetch('http://localhost:5000/instructors', requestStudentOptions);
+            response = await fetch('http://18.134.144.102:5000/instructors', requestStudentOptions);
           }
           
       
@@ -85,7 +85,7 @@ export default function RegisterForm(props ){
             })
           };
       
-          const userResponse = await fetch('http://localhost:5000/users', requestUserOptions);
+          const userResponse = await fetch('http://18.134.144.102:5000/users', requestUserOptions);
       
           if (!userResponse.ok)
             throw new Error(userResponse.status);

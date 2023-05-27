@@ -30,7 +30,7 @@ export default function AvailableTable(props){
         };
         
         try {
-            const response = await fetch('http://localhost:5000/available/'+availavle._id, requestAvailableOptions);
+            const response = await fetch('http://18.134.144.102:5000/available/'+availavle._id, requestAvailableOptions);
         
             if (!response.ok)
               throw new Error(response.status);
@@ -57,7 +57,7 @@ export default function AvailableTable(props){
         };
         
         try {
-            const response = await fetch('http://localhost:5000/available/'+props.state.user.object+'/'+new Date(startDate)+'/'+new Date(endDate), requestAvailableOptions);
+            const response = await fetch('http://18.134.144.102:5000/available/'+props.state.user.object+'/'+new Date(startDate)+'/'+new Date(endDate), requestAvailableOptions);
         
             if (!response.ok)
               throw new Error(response.status);

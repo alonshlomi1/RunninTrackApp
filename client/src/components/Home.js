@@ -11,7 +11,7 @@ export default function Home(props){
             headers: {  'accept': "application/json"}
         };
         try {
-            const response = await fetch('http://localhost:5000/'+(props.state.user.type==="student"?"students":"instructors")+'/'+props.state.user.object, requestUserInfoOptions);
+            const response = await fetch('http://18.134.144.102:5000/'+(props.state.user.type==="student"?"students":"instructors")+'/'+props.state.user.object, requestUserInfoOptions);
         
             if (!response.ok)
               throw new Error(response.status);

@@ -23,7 +23,7 @@ const [email, setEmail] = useState('');
                                password: password})
     };
     try {
-        const response = await fetch('http://localhost:5000/users/login', requestLoginOptions);
+        const response = await fetch('http://18.134.144.102:5000/users/login', requestLoginOptions);
     
         if (!response.ok)
           throw new Error(response.status);
