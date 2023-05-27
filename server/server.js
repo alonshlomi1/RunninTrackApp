@@ -8,7 +8,10 @@ app.use(express.json()); // Parse request bodies as JSON
 
 // Connect to MongoDB using Mongoose
 const mongoose = require('mongoose');
-mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, directConnection:true })
+mongoose.connect(`mongodb://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@mongodb:27017/Cluster0`,
+   { useNewUrlParser: true,
+   directConnection:true,
+   useUnifiedTopology: true,  })
   .then(() => console.log('Database Connected'))
   .catch(err => console.log('Error connecting to database:\n' + err));
 const db = mongoose.connection;
