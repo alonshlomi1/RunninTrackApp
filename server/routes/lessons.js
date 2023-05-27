@@ -20,19 +20,21 @@ router.get('/', async (req, res) => {
  * GET /lessons/available/:start/:end
  * Get available to register lessons within a specified time range
  */
-router.get('/available/:start/:end', async (req, res) => {
-    try{
-        const lessons = await Lessons.find({ available_to_reg : { $eq : true },
+router.get('/available/:start/:end/:id', async (req, res) => {
+    try {
+        const lessons = await Lessons.find({
+            available_to_reg: { $eq: true },
             start_time: {
                 $gte: req.params.start,
                 $lt: req.params.end
-            }})
-        res.json(lessons)
+            },
+            students: { $nin: [req.params.id] }
+        });
+        res.json(lessons);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
     }
-    catch (err){
-        res.status(500).json({massage: err.massage})
-    }
-})
+});
 /**
  * GET /lessons/:id/:start/:end
  * Get lessons for a specific instructor or student within a specified time range

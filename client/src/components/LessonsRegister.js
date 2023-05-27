@@ -52,9 +52,9 @@ export default function LessonsRegister(props){
           method: 'GET',
           headers: {  'accept': "application/json"}
       };
-      
+      console.log(props.state.user.object)
       try {
-          const response = await fetch('http://localhost:5000/lessons/available/'+new Date(startDate)+'/'+new Date(endDate), requestAvailableOptions);
+          const response = await fetch('http://localhost:5000/lessons/available/'+new Date(startDate)+'/'+new Date(endDate)+'/'+props.state.user.object, requestAvailableOptions);
       
           if (!response.ok)
             throw new Error(response.status);

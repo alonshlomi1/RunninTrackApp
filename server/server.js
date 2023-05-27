@@ -29,6 +29,7 @@ const lessonsRouter = require('./routes/lessons.js');
 const availableRouter = require('./routes/available.js');
 const scheduleRouter = require('./routes/schedule.js');
 const usersRouter = require('./routes/users.js');
+const resetRouter = require('./routes/reset.js');
 
 app.use('/instructors', instructorsRouter); // instructors router at '/instructors' path
 app.use('/students', studentsRouter); // students router at '/students' path
@@ -36,6 +37,7 @@ app.use('/lessons', lessonsRouter); // lessons router at '/lessons' path
 app.use('/available', availableRouter); // available router at '/available' path
 app.use('/schedule', scheduleRouter); // schedule router at '/schedule' path
 app.use('/users', usersRouter); // users router at '/users' path
+app.use('/reset', resetRouter); // users router at '/users' path
 
 // Start the server
 app.listen(5000, () => console.log('Server is up'));
