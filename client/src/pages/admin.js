@@ -1,6 +1,5 @@
 import React from 'react'
 import Schedule from '../components/schedule'
-import Setting from './setting'
 import Home from '../components/Home'
 import AvailableForm from '../components/AvailableForm';
 import Lessons from '../components/Lessons'
