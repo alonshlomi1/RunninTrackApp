@@ -8,7 +8,7 @@ app.use(express.json()); // Parse request bodies as JSON
 
 // Connect to MongoDB using Mongoose
 const mongoose = require('mongoose');
-mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true })
+mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, directConnection:true })
   .then(() => console.log('Database Connected'))
   .catch(err => console.log('Error connecting to database:\n' + err));
 const db = mongoose.connection;
