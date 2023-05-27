@@ -96,7 +96,7 @@ export default function RegisterForm(props ){
               return {
                 ...prev,
                 user: userData,
-                menu: userData.type==="admin"?["Home","My Lessons","Submit Lessons","Add Available Time","Instructors"]:userData.type=="instructor"?["Home","My Lessons","Add Available Time","Edit Available Time"]:["Home","My Lessons","Lesson Register"],
+                menu: userData.type==="admin"?["Home","My Lessons","Submit Lessons","Add Available Time","Instructors"]:userData.type==="instructor"?["Home","My Lessons","Add Available Time","Edit Available Time"]:["Home","My Lessons","Lesson Register"],
                 page: "Home"
               }
             });
