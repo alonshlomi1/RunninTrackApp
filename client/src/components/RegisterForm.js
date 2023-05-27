@@ -49,8 +49,15 @@ export default function RegisterForm(props ){
           })
         };
         try {
-          console.log(props.state.user)
-          const response = await fetch('http://localhost:5000/'+props.state.user == null? "students": "instructors", requestStudentOptions);
+          console.log('http://localhost:5000/'+(props.state.user == null? "students": "instructors"))
+          let response
+          if(props.state.user === null){
+            response = await fetch('http://localhost:5000/students', requestStudentOptions);
+          }
+          else{
+            response = await fetch('http://localhost:5000/instructors', requestStudentOptions);
+          }
+          
       
           if (!response.ok)
             throw new Error(response.status);

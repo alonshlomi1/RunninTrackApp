@@ -9,7 +9,7 @@ const Users = require('../models/users')
 router.post('/', async (req, res) => {
     try{
         let user = await Users.find({ email : { $eq : req.body.email } })
-        if (user != null){
+        if (user.length > 0){
             return res.status(409).json({massage: 'Email'})
         }
         user = new Users({
@@ -18,7 +18,6 @@ router.post('/', async (req, res) => {
             type: req.body.type,
             object: req.body.object
         })
-        console.log(user)
         const newUser = await user.save()
         res.status(201).json(newUser)    }
     catch (err){
@@ -34,7 +33,6 @@ router.post('/login', async (req, res) => {
     try{
         user = await Users.findOne({ email : { $eq : req.body.email },
                                     password : { $eq : req.body.password } })
-        console.log(user)
         if (user == null){
             return res.status(404).json({massage: 'Cannot find User'})
         }
