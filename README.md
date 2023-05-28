@@ -34,23 +34,23 @@ login as admin instructor with: email: i1@gmail.com, password: 123
 
 #### All users pages:
 ![image](https://github.com/alonshlomi1/RunningTrackApp/assets/98226796/93359fd7-657f-4c2e-9752-e9ef148ec16d)
-shows all the lessons that the user is participating in.
+-shows all the lessons that the user is participating in.
 
 ### Student pages:
 ![image](https://github.com/alonshlomi1/RunningTrackApp/assets/98226796/241be518-8c5e-4ab6-ae6d-f02e9c39281c)
-Lesson registration.
+-Lesson registration.
 
 ### Instructor pages:
 ![image](https://github.com/alonshlomi1/RunningTrackApp/assets/98226796/21b755bc-4c6b-4752-967c-2903d35cacaa)
-Add new available time slots for lessons.
+-Add new available time slots for lessons.
 ![image](https://github.com/alonshlomi1/RunningTrackApp/assets/98226796/e3e80715-0e20-434a-aa1d-854370cd259d)
-Edit existing time slots.
+-Edit existing time slots.
 
 ### Admin Instructor pages:
 ![image](https://github.com/alonshlomi1/RunningTrackApp/assets/98226796/443be31c-de8d-42bd-b0c7-bba11426253d)
-Save lessons from available time slots
+-Save lessons from available time slots
 ![image](https://github.com/alonshlomi1/RunningTrackApp/assets/98226796/08f7f0df-0a0b-452e-bb80-38499e47f785)
-Add new Instructor
+-Add new Instructor
 
 
 
