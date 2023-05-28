@@ -100,7 +100,9 @@ export default function LessonsRegister(props){
                     <img src={divide} alt="Logo" />
                     <img src={group} alt="Logo" />
                     </div></th>
+                <th>students</th>
                 </tr>
+
             </thead>
             <tbody>
                 {lessons.map((lesson) => (

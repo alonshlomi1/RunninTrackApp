@@ -20,6 +20,7 @@ export default function LessonsLine(props){
                     <div className="group-logo">
                     <img src={group} alt="Logo" />
                     </div>}</td>
+                    <td>{lesson.students.length}</td>
                 </tr>
     )
 }
