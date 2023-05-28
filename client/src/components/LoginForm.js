@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import port from '../port'
 
 export default function LoginForm(props){
 const [email, setEmail] = useState('');
@@ -23,7 +24,7 @@ const [email, setEmail] = useState('');
                                password: password})
     };
     try {
-        const response = await fetch('http://18.134.144.102:5000/users/login', requestLoginOptions);
+        const response = await fetch('http://'+port+':5000/users/login', requestLoginOptions);
     
         if (!response.ok)
           throw new Error(response.status);

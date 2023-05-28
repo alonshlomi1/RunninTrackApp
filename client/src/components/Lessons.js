@@ -3,6 +3,7 @@ import LessonLine from './LessonLine'
 import group from '../images/group.png'
 import single from '../images/single.png'
 import divide from '../images/divide.png'
+import port from '../port'
 
 
 export default function LessonsRegister(props){
@@ -36,7 +37,7 @@ export default function LessonsRegister(props){
         };
       
         try {
-          let response = await fetch('http://18.134.144.102:5000/instructors', requestUserOptions);
+          let response = await fetch('http://'+port+':5000/instructors', requestUserOptions);
       
           if (!response.ok)
             throw new Error(response.status);
@@ -60,7 +61,7 @@ export default function LessonsRegister(props){
             headers: {  'accept': "application/json"}
         };
         try {
-            const response = await fetch('http://18.134.144.102:5000/lessons/'+props.state.user.object+'/'+new Date(startDate)+'/'+new Date(endDate), requestAvailableOptions);
+            const response = await fetch('http://'+port+':5000/lessons/'+props.state.user.object+'/'+new Date(startDate)+'/'+new Date(endDate), requestAvailableOptions);
         
             if (!response.ok)
               throw new Error(response.status);

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import group from '../images/group.png'
 import single from '../images/single.png'
 import divide from '../images/divide.png'
+import port from '../port'
 const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
 export default function LessonsRegister(props){
@@ -31,7 +32,7 @@ export default function LessonsRegister(props){
       };
     
       try {
-        let response = await fetch('http://18.134.144.102:5000/instructors', requestUserOptions);
+        let response = await fetch('http://'+port+':5000/instructors', requestUserOptions);
     
         if (!response.ok)
           throw new Error(response.status);
@@ -53,7 +54,7 @@ export default function LessonsRegister(props){
           headers: {  'accept': "application/json"}
       };
       try {
-          const response = await fetch('http://18.134.144.102:5000/lessons/available/'+new Date(startDate)+'/'+new Date(endDate)+'/'+props.state.user.object, requestAvailableOptions);
+          const response = await fetch('http://'+port+':5000/lessons/available/'+new Date(startDate)+'/'+new Date(endDate)+'/'+props.state.user.object, requestAvailableOptions);
       
           if (!response.ok)
             throw new Error(response.status);
@@ -76,7 +77,7 @@ export default function LessonsRegister(props){
       };
       
       try {
-          const response = await fetch('http://18.134.144.102:5000/lessons/'+ lesson._id, requestAvailableOptions);
+          const response = await fetch('http://'+port+':5000/lessons/'+ lesson._id, requestAvailableOptions);
       
           if (!response.ok)
             throw new Error(response.status);

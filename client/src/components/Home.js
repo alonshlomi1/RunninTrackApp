@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import port from '../port'
 
 
 export default function Home(props){
@@ -11,7 +12,7 @@ export default function Home(props){
             headers: {  'accept': "application/json"}
         };
         try {
-            const response = await fetch('http://18.134.144.102:5000/'+(props.state.user.type==="student"?"students":"instructors")+'/'+props.state.user.object, requestUserInfoOptions);
+            const response = await fetch('http://'+port+':5000/'+(props.state.user.type==="student"?"students":"instructors")+'/'+props.state.user.object, requestUserInfoOptions);
         
             if (!response.ok)
               throw new Error(response.status);

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import port from '../port'
 export default function AvailableForm(props){
     const [date, setDate] = useState(getTodayDate(7));
     const [startHour, setStartHour] = useState('');
@@ -35,7 +35,7 @@ export default function AvailableForm(props){
         };
         
         try {
-            const response = await fetch('http://18.134.144.102:5000/available', requestAvailableOptions);
+            const response = await fetch('http://'+port+':5000/available', requestAvailableOptions);
         
             if (!response.ok)
               throw new Error(response.status);
