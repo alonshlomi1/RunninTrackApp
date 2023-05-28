@@ -17,7 +17,7 @@ Briefly describe your project here, including its purpose, goals, and any releva
 7. Access the project in your browser: http://localhost:3000
 
 ## Running on AWS
-Access the project in your browser: http://172.31.44.182:3000  (172.31.44.182 may change because its running on a free AWS)
+Access the project in your browser: http://13.41.188.37:3000  (13.41.188.37 may change because its running on a free AWS)
 
 
 
