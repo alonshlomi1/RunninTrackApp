@@ -44,7 +44,6 @@ const [email, setEmail] = useState('');
       }
 
   };
-  console.log(port)
 
     return(
     <div className="form">
