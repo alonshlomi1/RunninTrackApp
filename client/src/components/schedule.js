@@ -37,7 +37,7 @@ export default function Schedule(){
     };
   
     try {
-      let response = await fetch('http://'+port+'2:5000/instructors', requestUserOptions);
+      let response = await fetch('http://'+port+':5000/instructors', requestUserOptions);
   
       if (!response.ok)
         throw new Error(response.status);
