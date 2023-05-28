@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import port from '../port'
+import { port } from '../port.js'
 
 export default function LoginForm(props){
 const [email, setEmail] = useState('');
@@ -44,7 +44,7 @@ const [email, setEmail] = useState('');
       }
 
   };
-  
+  console.log(port)
 
     return(
     <div className="form">

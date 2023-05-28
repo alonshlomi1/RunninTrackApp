@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import group from '../images/group.png'
 import single from '../images/single.png'
 import divide from '../images/divide.png'
-import port from '../port'
+import { port } from '../port.js'
 const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
 export default function LessonsRegister(props){

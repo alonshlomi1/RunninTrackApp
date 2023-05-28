@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import port from '../port'
+import { port } from '../port.js'
 const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
 export default function AvailableTable(props){

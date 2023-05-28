@@ -3,7 +3,7 @@ import LessonLine from './LessonLine'
 import group from '../images/group.png'
 import single from '../images/single.png'
 import divide from '../images/divide.png'
-import port from '../port'
+import { port } from '../port.js'
 
 
 export default function LessonsRegister(props){

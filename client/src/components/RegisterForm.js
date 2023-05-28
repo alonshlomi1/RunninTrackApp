@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import port from '../port'
+import { port } from '../port.js'
 
 export default function RegisterForm(props ){
     const [name, setName] = useState('');

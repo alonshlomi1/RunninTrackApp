@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import port from '../port'
+import { port } from '../port.js'
 
 
 export default function Home(props){
