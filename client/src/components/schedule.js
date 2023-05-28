@@ -101,7 +101,6 @@ export default function Schedule(){
     }
       
   }
-  console.log(tableData)
   return <div className='page'>
     <div>
         <label className="label">from:</label>

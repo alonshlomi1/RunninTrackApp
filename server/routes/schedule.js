@@ -30,7 +30,8 @@ async function getAllAvailableSorted(req, res, next) {
                 $gte: req.params.start,
                 $lt:req.params.end
             }
-        }).sort({"start_time": 1}) 
+        })//.sort({"start_time": 1}) 
+        availableList.sort((a, b) => a.start_time - b.start_time);
         if (availableList == null){
             return res.status(404).json({massage: 'Cannot find any Available'})
         }
@@ -47,9 +48,8 @@ async function getAllAvailableSorted(req, res, next) {
  */
 function getSchedule(req, res, next) {
     let current_time
-
     // Set the initial current time to the start time of the first available time slot
-    if(res.availableList[0])
+    if(res.availableList.length > 0)
         current_time = res.availableList[0].start_time
     let schedule = []
     //TODO: extend to number of schedules
@@ -61,11 +61,10 @@ function getSchedule(req, res, next) {
             // Then: update the start time to the current time
             if (new Date(available.start_time) <= new Date(current_time)){
                 available.start_time = new Date(current_time)}
-
             // Generate the schedule by cutting the available time slot 
             // to creat new time slots with the specified lesson duration
             // Runs until there's not enough time in the time slot for a full lesson
-            while((Math.abs( available.end_time -available.start_time) / 36e5)>=lesson_duration){
+            while((( available.end_time -available.start_time) / 36e5)>=lesson_duration){
                 const newAvailable = new Available({
                     start_time: available.start_time,
                     end_time: new Date(available.start_time.getTime() + lesson_duration * hour),
@@ -82,7 +81,6 @@ function getSchedule(req, res, next) {
             current_time = available.start_time
         }
     });
-
     res.schedule= schedule
     next()
 }
