@@ -9,7 +9,7 @@ NodeJS, React and MongoDB app for managing the schedule and classes at the runni
     Students can register to available lessons or look up for his registered lessons.
 - Instructor:
     Instructors can look up for his lessons and add or edit time slots for lessons.
-- Admin
+- Admin: 
     Admin can do everything Instructor can do. in addition, he can add new instructors and schedule lessons from available time slots.
 
 ## Prerequisites
