@@ -114,13 +114,13 @@ async function addUsers(req, res, next) {
         email: "i2@gmail.com",
         password: "123",
         type: "instructor",
-        object: res.newInstructor1
+        object: res.newInstructor2
     })
     const user5 = new Users({
         email: "i3@gmail.com",
         password: "123",
         type: "instructor",
-        object: res.newInstructor1
+        object: res.newInstructor3
     })
     try{
          res.newUser1 = await user1.save()
