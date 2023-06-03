@@ -2,7 +2,15 @@
 
 ## Project Overview
 
-Briefly describe your project here, including its purpose, goals, and any relevant background information.
+NodeJS, React and MongoDB app for managing the schedule and classes at the running track.
+
+# Users
+- Student:
+    Students can register to available lessons or look up for his registered lessons.
+- Instructor:
+    Instructors can look up for his lessons and add or edit time slots for lessons.
+- Admin
+    Admin can do everything Instructor can do. in addition, he can add new instructors and schedule lessons from available time slots.
 
 ## Prerequisites
 - Docker 
@@ -49,8 +57,10 @@ Access the project in your browser: http://13.41.188.37:3000  (13.41.188.37 may 
 ### Admin Instructor pages:
 ![image](https://github.com/alonshlomi1/RunningTrackApp/assets/98226796/443be31c-de8d-42bd-b0c7-bba11426253d)
 - Save lessons from available time slots
+
 ![image](https://github.com/alonshlomi1/RunningTrackApp/assets/98226796/08f7f0df-0a0b-452e-bb80-38499e47f785)
 - Add new Instructor
+
 
 
 
