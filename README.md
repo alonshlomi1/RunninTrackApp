@@ -4,7 +4,7 @@
 
 NodeJS, React and MongoDB app for managing the schedule and classes at the running track.
 
-# Users
+### Users
 - Student:
     Students can register to available lessons or look up for his registered lessons.
 - Instructor:
